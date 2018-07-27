@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tsumamiyage</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="header">
+    <div class="header-logo">
+      <h1 class="logo"><%= link_to("つまみやげ", "/") %></h1>
+    </div>
+    <div class="header-list">
+      <ul>
+          <li>ユーザー名</li>
+          <li>つまみやげとは</li>
+          <li><%= link_to "投稿する", "/posts/new" %></li>
+        </ul>
+    </div>
+  </header>
+
+<%= yield %>
+
+  <footer>
+    <p>
+      Copyright Tsumamiyage 2018.
+    </p>
+  </footer>
+</body>
+</html>
