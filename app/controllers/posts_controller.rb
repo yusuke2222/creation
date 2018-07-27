@@ -24,8 +24,11 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.text = params[:text]
     @post.image = params[:image]
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      redirect_to("/posts/index")
+    else
+      render("/posts/edit")
+    end
   end
 
   def destroy
