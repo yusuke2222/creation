@@ -19,6 +19,12 @@
         </ul>
     </div>
   </header>
+      <!-- flash[:notice]に代入されたメッセージを表示 -->
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
 <%= yield %>
 

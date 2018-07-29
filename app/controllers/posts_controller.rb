@@ -25,6 +25,7 @@ class PostsController < ApplicationController
     @post.text = params[:text]
     @post.image = params[:image]
     if @post.save
+      flash[:notice] = "投稿を編集しました"
       redirect_to("/posts/index")
     else
       render("/posts/edit")
