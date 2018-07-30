@@ -4,8 +4,13 @@
       <h3 class="form-heading">
         投稿する
       </h3>
+        <% @post.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
       <input placeholder="Image Url" type="text" name="image">
-      <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+      <textarea cols="30" name="text" placeholder="text" rows="10"><%= @post.text %></textarea>
       <input type="submit" value="投稿">
     <% end %>
   </div>
