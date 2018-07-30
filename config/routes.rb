@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  post 'users/create' => 'users#create'
+
+  get 'signup' => 'users#new'
+
   root 'posts#index'
   get 'posts/index' => 'posts#index'
   get 'posts/new' => 'posts#new'
