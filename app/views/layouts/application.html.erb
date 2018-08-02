@@ -20,7 +20,6 @@
         </ul>
     </div>
   </header>
-      <!-- flash[:notice]に代入されたメッセージを表示 -->
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>
@@ -36,7 +35,6 @@
   </footer>
   <script>
   $( document ).ready(function() {
-    // メッセージを３秒後にフェードアウトする
     $('.flash').fadeOut(3000);
 });
 </script>
