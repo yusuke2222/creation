@@ -6,8 +6,8 @@
   margin-bottom: 20px;
 }
 
-.user {
-  margin-bottom: 20px;
+.main.user-show {
+  padding: 40px auto;
 }
 
 .users-heading {
@@ -40,4 +40,8 @@
   text-align: left;
   display: table-cell;
   vertical-align: middle;
+}
+
+.user-show {
+  text-align: center;
 }
