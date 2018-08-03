@@ -5,14 +5,26 @@
 .item-box {
   float: left;
   width: 270px;
-  margin: 15px;
+  margin: 23px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-.container {
+.main-container {
   width: 100%;
   margin: 0;
   padding: 30px 50px;
+  background-color: #f5f5f3;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+.main {
   background-color: #f5f5f3;
 }
 
@@ -64,7 +76,7 @@ img {
 
 .form-heading {
   font-weight: 300;
-  margin: 60px 0 20px;
+  margin: 0 20px;
   font-size: 28px;
   color: #bcc8d4;
 }
@@ -93,14 +105,26 @@ img {
 }
 
 .posts-show-item {
-  padding: 30px;
+  padding: 20px;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   overflow: hidden;
 }
 
 .text p {
-  padding-left: 50px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.post-menus {
+  float: right;
+  padding-right: 140px;
+}
+
+.post-menus a, .post-menus input {
+  color: #8899a6;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 .flash {
