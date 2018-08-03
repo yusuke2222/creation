@@ -9,7 +9,13 @@
 <body>
   <header class="header">
     <div class="header-logo">
-      <h1 class="logo"><%= link_to("つまみやげ", "/") %></h1>
+      <h1 class="logo">
+      <% if @current_user %>
+        <%= link_to "つまみやげ", "/posts/index" %>
+      <% else %>
+        <%= link_to "つまみやげ", "/" %>
+      <% end %>
+      </h1>
     </div>
     <div class="header-list">
       <ul>
