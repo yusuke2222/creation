@@ -8,9 +8,10 @@
         </div>
       </div>
       <div class="detail">
-        <p class="title">
-          <%= link_to(post.text, "/posts/#{post.id}") %>
-        </p>
+        <%= link_to post.text, "/posts/#{post.id}" %>
+        <div class="post-user-name">
+          <%= link_to post.user.name, "/users/#{post.user.id}" %>
+        </div>
       </div>
     </div>
     <% end %>
