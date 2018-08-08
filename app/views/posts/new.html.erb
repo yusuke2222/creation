@@ -7,13 +7,14 @@
       <div class="form">
         <div class="form-body">
         <% @post.errors.full_messages.each do |message| %>
-        <div class="form-error">
-        <%= message %>
-        </div>
-      <% end %>
+          <div class="form-error">
+          <%= message %>
+          </div>
+        <% end %>
       <input placeholder="Image Url" type="text" name="image">
-      <textarea cols="30" name="text" placeholder="text" rows="10"><%= @post.text %></textarea>
-      <input type="submit" value="投稿">
+      <textarea name="text" placeholder=" Name"><%= @post.text %></textarea>
+      <%= render "posts/select_pref" %>
+      <input  class="submit" type="submit" value="投稿">
     <% end %>
   </div>
 </div>
