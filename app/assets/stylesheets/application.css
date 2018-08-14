@@ -104,11 +104,11 @@
 }
 
 .dropmenu li:hover > a{
-  background: #f6f6f6;
+
 }
 
 .dropmenu li a:hover{
-  background: #DCDCDC;
+  border-bottom: 1px solid #7c8c0e;
 }
 
 #normal li ul li{
