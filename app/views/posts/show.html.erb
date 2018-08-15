@@ -27,6 +27,13 @@
           <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
         </div>
       <% end %>
+      <% if @current_user %>
+      <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
     </div>
+
+    <% end %>
   </div>
 </div>
