@@ -1,4 +1,12 @@
 <div class="main-container">
+  <% if @current_user %>
+  <% else %>
+    <div id="description">
+    <p>あなただけの一品を見つけてください</p>
+    <p class="des_p">全国で見つけた食べ物を保存・共有できるサービスです</p>
+    <a id="signin_btn" class="button" href="">新規登録</a>
+    </div>
+  <% end %>
   <div class="container-inner inner-default clearfix">
     <% @posts.each do |post| %>
     <div class="item-box">
