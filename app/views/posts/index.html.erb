@@ -8,9 +8,12 @@
         </div>
       </div>
       <div class="detail">
-        <%= link_to post.text, "/posts/#{post.id}" %>
-        <div class="post-user-name">
-          <%= link_to post.user.name, "/users/#{post.user.id}" %>
+        <h3><%= link_to post.text, "/posts/#{post.id}" %></h3>
+        <div class="flex fend">
+          <img src="img/logo.png" alt="" width="20" height="20" class="post-user-icon">
+          <div class="post-user-name">
+            <%= link_to post.user.name, "/users/#{post.user.id}" %>
+          </div>
         </div>
       </div>
     </div>
@@ -18,4 +21,3 @@
   </div>
   <%= paginate(@posts) %>
 </div>
-
