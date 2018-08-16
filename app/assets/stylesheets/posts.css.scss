@@ -223,3 +223,15 @@ span.fa {
   letter-spacing: 2px;
   border-radius: 10px;
 }
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  a {
+    color: #57C3E9;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
