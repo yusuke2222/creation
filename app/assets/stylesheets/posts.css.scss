@@ -61,10 +61,30 @@
   display: block;
 }
 
-img {
+.img-wrap img {
   max-height: 200px;
   max-width: 250px;
   margin: 30px auto;
+}
+
+.show-img {
+  margin: 0 90px;
+}
+
+.show-img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.name a {
+  float: right;
+}
+
+.text {
+  margin: 25px 20px;
+  padding-top: 20px;
 }
 
 .form {
@@ -95,6 +115,17 @@ img {
   border-radius: 2px;
 }
 
+.form input.form-btn {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  color: white;
+  background-color: #57C3E9;
+}
+
 .form textarea {
   width: 100%;
   min-height: 110px;
@@ -116,13 +147,13 @@ a {
 }
 
 .text p {
-  padding-left: 30px;
-  margin-bottom: 30px;
+  padding-left: 80px;
+  margin-bottom: 20px;
 }
 
 .post-menus {
-  float: right;
-  padding-right: 140px;
+  float: left;
+  padding-left: 100px;
 }
 
 .post-menus a, .post-menus input {
@@ -159,4 +190,20 @@ a {
 
 span.fa {
   padding-left: 340px;
+}
+
+.form-container {
+  width: 320px;
+  margin: 10px auto;
+}
+
+.form-container input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 5px;
+  color: white;
+  background-color: #57C3E9;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border-radius: 10px;
 }
