@@ -1,4 +1,12 @@
 <div class="main-container">
+  <% if @current_user %>
+  <% else %>
+    <div id="description">
+    <p>あなただけの一品を見つけてください</p>
+    <p class="des_p">全国で見つけた食べ物を保存・共有できるサービスです</p>
+    <a id="signin_btn" class="button" href="">新規登録</a>
+    </div>
+  <% end %>
   <div class="container-inner inner-default clearfix">
     <% @posts.each do |post| %>
     <div class="item-box">
@@ -8,9 +16,12 @@
         </div>
       </div>
       <div class="detail">
-        <%= link_to post.text, "/posts/#{post.id}" %>
-        <div class="post-user-name">
-          <%= link_to post.user.name, "/users/#{post.user.id}" %>
+        <h3><%= link_to post.text, "/posts/#{post.id}" %></h3>
+        <div class="flex fend">
+          <img src="img/logo.png" alt="" width="20" height="20" class="post-user-icon">
+          <div class="post-user-name">
+            <%= link_to post.user.name, "/users/#{post.user.id}" %>
+          </div>
         </div>
       </div>
     </div>
@@ -18,4 +29,3 @@
   </div>
   <%= paginate(@posts) %>
 </div>
-
