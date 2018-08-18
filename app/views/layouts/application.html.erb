@@ -41,7 +41,7 @@
           <li><%= link_to "ログアウト", "/logout", method: :post %></li>
         </ul>
         <% else %>
-          <li class="introduce">つまみやげとは</li>
+          <li class="introduce"><%= link_to "つまみやげとは", "/about" %></li>
           <li><%= link_to "新規登録", "/signup" %></li>
           <li><%= link_to "ログイン", "/login" %></li>
         <% end %>
