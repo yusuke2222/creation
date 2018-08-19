@@ -9,6 +9,22 @@
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
+.about-main {
+  background-image: url("tumami.png");
+  padding: 200px 0 100px;
+  text-align: center;
+  position: absolute;
+  top: 20;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  color: white;
+  background-color: #3ecdc6;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+}
+
 .main-container {
   width: 100%;
   margin: 0;
@@ -47,12 +63,16 @@
 }
 
 .detail {
-  height: 100px;
+  height: 90px;
   border: 1px solid #ddd;
   border-top: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   font-size: 13px;
   padding: 10px;
+}
+
+.detail h3 {
+  margin-bottom: 5px;
 }
 
 .detail h3 a {
@@ -64,10 +84,17 @@
   font-size: 12px;
   letter-spacing: -0.2px;
   margin: 0 0 10px 5px;
+  float: left;
 }
 
 .post-user-name a {
   color: inherit;
+}
+
+img.post-user-icon {
+  border: 1px solid #666;
+  border-radius: 50%;
+  float: left;
 }
 
 .clearfix:after {
