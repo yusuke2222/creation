@@ -97,6 +97,7 @@ div#signin_btn a {
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
+  color: black;
 }
 
 .dropmenu li ul{
@@ -121,7 +122,6 @@ div#signin_btn a {
 }
 
 .dropmenu li:hover > a{
-
 }
 
 .dropmenu li a:hover{
