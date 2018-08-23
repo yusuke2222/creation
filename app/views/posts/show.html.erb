@@ -1,15 +1,22 @@
 <div class="main posts-show">
   <div class="container">
     <div class="posts-show-item">
-      <div class="post-user-name">
-        <img src="<%= "/user_images/#{@user.image_name}" %>">
-        <%= link_to @user.name, "/users/#{@user.id}" %>
+      <div class="show-img">
+        <img alt="image" src="<%= @post.image %>">
+        <span class="name">
+          <a href="/users/<%= @post.user.id %>">
+            <span>投稿者：</span><%= @post.user.name %>
+          </a>
+        </span>
       </div>
-      <div class="img-wrap">
-         <img alt="image" src="<%= @post.image %>">
-      </div>
+      <% if @post.user_id == @current_user.id %>
+        <div class="post-menus">
+          <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+          <%= link_to("削除", "/posts/#{@post.id}", method: :delete) %>
+        </div>
+      <% end %>
       <div class="text">
-        <p><%= @post.text %></p>
+        <p>商品名： <%= @post.text %></p>
       </div>
       <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
         <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
@@ -21,13 +28,30 @@
         <% end %>
       <% end %>
       <%= @likes_count %>
+      <div class="form-container">
+        <% if @current_user %>
+        <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
+          <textarea cols="60" name="text" placeholder="コメントする" rows="3"></textarea>
+          <input type="submit" value="SENT">
+        <% end %>
+      </div>
+      <div class="comments">
+        <h4>コメント一覧</h4>
+        <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+            <% if comment.user == @current_user %>
+            <%= link_to("削除", post_comment_path(@comments, comment), method: :delete) %>
+            <% end %>
+          </p>
 
-      <% if @post.user_id == @current_user.id %>
-        <div class="post-menus">
-          <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-          <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
-        </div>
-      <% end %>
+        <% end %>
+        <% end %>
+      </div>
     </div>
+
+  <% end %>
   </div>
 </div>

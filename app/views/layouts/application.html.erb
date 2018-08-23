@@ -12,21 +12,36 @@
     <div class="header-logo">
       <h1 class="logo">
       <% if @current_user %>
-        <%= link_to "つまみやげ", "/posts/index" %>
+        <%= link_to "つまみやげ", "/posts" %>
       <% else %>
         <%= link_to "つまみやげ", "/" %>
       <% end %>
       </h1>
     </div>
     <div class="header-list">
-      <ul>
+      <ul id="normal" class="dropmenu">
         <% if @current_user %>
           <li><%= link_to @current_user.name, "/users/#{@current_user.id}" %></li>
           <li><%= link_to "投稿する", "/posts/new" %></li>
-          <li><%= link_to "地域別", "" %></li>
+          <ul>
+            <li><%= link_to "地域別", "" %>
+              <ul>
+                <li><a href="#">北海道</a></li>
+                <li><a href="#">東北地方</a></li>
+                <li><a href="#">関東地方</a></li>
+                <li><a href="#">中部地方</a></li>
+                <li><a href="#">関西地方</a></li>
+                <li><a href="#">中国地方</a></li>
+                <li><a href="#">四国地方</a></li>
+                <li><a href="#">九州地方</a></li>
+                <li><a href="#">沖縄</a></li>
+              </ul>
+            </li>
+          </ul>
           <li><%= link_to "ログアウト", "/logout", method: :post %></li>
+        </ul>
         <% else %>
-          <li>つまみやげとは</li>
+          <li class="introduce"><%= link_to "つまみやげとは", "/about" %></li>
           <li><%= link_to "新規登録", "/signup" %></li>
           <li><%= link_to "ログイン", "/login" %></li>
         <% end %>
