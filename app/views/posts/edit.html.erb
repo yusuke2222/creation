@@ -11,7 +11,8 @@
           <% end %>
         <textarea name="image"><%= @post.image %></textarea>
         <textarea name="text"><%= @post.text %></textarea>
-        <input type="submit" value="保存">
+        <%= render "posts/select_pref" %>
+        <input class="submit" type="submit" value="保存">
       </div>
     </div>
     <% end %>

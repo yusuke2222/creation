@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# ActiveRecord::Schema.define(version: 20180808062536) do
 ActiveRecord::Schema.define(version: 20180815043828) do
 
   create_table "comments", force: :cascade do |t|

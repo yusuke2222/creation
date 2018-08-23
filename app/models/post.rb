@@ -1,5 +1,8 @@
 class Post < ActiveRecord::Base
+
+  belongs_to :prefecture
   belongs_to :user
+  has_many :likes
   has_many :comments
 
   validates :text, {presence: true, length: {maximum: 25}}
