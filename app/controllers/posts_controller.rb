@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @prefectures = Prefecture.all
   end
 
   def show
@@ -17,8 +18,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(image: params[:image], text: params[:text], prefecture: params[:prefecture], user_id: @current_user.id)
-    if @post.save
+    @post = Post.new(image: params[:image], text: params[:text], prefecture_id: params[:post][:prefecture_id], user_id: @current_user.id)
+    if @post.save!
       flash[:notice] = "投稿を作成しました"
       redirect_to("/posts/index")
     else

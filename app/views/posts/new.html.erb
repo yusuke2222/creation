@@ -6,15 +6,17 @@
     <%= form_tag('/posts/create', method: :post) do %>
       <div class="form">
         <div class="form-body">
-        <% @post.errors.full_messages.each do |message| %>
-          <div class="form-error">
-          <%= message %>
-          </div>
-        <% end %>
-      <input placeholder="Image Url" type="text" name="image">
-      <textarea name="text" placeholder=" Name"><%= @post.text %></textarea>
-      <%= render "posts/select_pref" %>
-      <input  class="submit" type="submit" value="投稿">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+            <%= message %>
+            </div>
+          <% end %>
+          <input placeholder="Image Url" type="text" name="image">
+          <textarea name="text" placeholder=" Name"><%= @post.text %></textarea>
+          <%= render "posts/select_pref" %>
+          <input  class="submit" type="submit" value="投稿">
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
