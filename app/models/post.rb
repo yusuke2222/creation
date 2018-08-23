@@ -1,4 +1,8 @@
 class Post < ActiveRecord::Base
+  belongs_to :prefecture
+  belongs_to :user
+  has_many :likes
+
   validates :text, {presence: true, length: {maximum: 25}}
   validates :image, {presence: true}
   validates :user_id, {presence: true}
