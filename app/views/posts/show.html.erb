@@ -30,8 +30,8 @@
       <%= @likes_count %>
       <div class="form-container">
         <% if @current_user %>
-        <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
-          <textarea cols="60" name="text" placeholder="コメントする" rows="3"></textarea>
+        <%= form_tag("/posts/#{@post.id}/comments", method: :post, id: "new_comment") do %>
+          <textarea cols="60" name="text" placeholder="コメントする" rows="3" class="textbox"></textarea>
           <input type="submit" value="SENT">
         <% end %>
       </div>
