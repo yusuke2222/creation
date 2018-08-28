@@ -17,6 +17,7 @@
       <% end %>
       <div class="text">
         <p>商品名： <%= @post.text %></p>
+        <p>購入場所 : <%= @post.prefecture.name %></p>
       </div>
       <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
         <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
